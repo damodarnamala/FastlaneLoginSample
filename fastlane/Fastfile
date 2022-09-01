@@ -1,0 +1,104 @@
+
+default_platform(:ios)
+platform :ios do
+  desc "  ----- Test ------- "
+  lane :code_test do
+    # params
+    puts "🧪🧪🧪🧪🧪🧪🧪🧪 Running test cases 🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪🧪"
+
+    params =  { 
+      project:  "StylesApp.xcodeproj", 
+      scheme: 'StylesApp', 
+      device: 'iPhone 13 Pro Max'
+    }     
+    # action
+    scan(params)
+  end
+  
+  desc "  ----- Slather ------- "
+  lane :code_report do
+    puts " 📊 📊 📊 📊 📊 📊 📊 📊 📊  Running slather  📊 📊 📊 📊 📊 📊 📊 "
+
+    # params
+    params =  { 
+      output_directory: "fastlane/slather_reports",
+      html: true,
+      source_directory: "../StylesApp/Source",
+      scheme: "StylesApp",
+      proj: "StylesApp.xcodeproj",
+      ignore: [ "R.generated.swift", "Pods/*"],
+      show: true  
+      }
+    # action
+    slather(params)
+  end
+
+  desc "  ----- Swiftlint ------- "
+  lane :code_lint do
+    puts " ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️  Swiftlint  ⁑⁑⁑⁑⁑⁑⁑⁑⁑  ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ ⚠️ "
+    # params
+    params =  { 
+      mode: :lint,      # SwiftLint mode: :lint (default) or :autocorrect
+      config_file: '.swiftlint.yml',
+      output_file: "./fastlane/swiftlint_report/report.html"
+    }
+    # action
+    swiftlint(params)
+  end
+
+
+  desc " 🐮 🐮 🐮 🐮 🐮 🐮 Running XCov"
+  lane :code_xcov do
+    puts " 🐮 🐮 🐮 🐮 🐮 🐮 Running XCov"
+    # params
+    params =  { 
+      project:  'StylesApp.xcodeproj', 
+      scheme: 'StylesApp', 
+      output_directory: './fastlane/xcov_report',
+      html_report: "true",
+    }
+    # action
+    xcov(params)
+  end
+
+  desc "  ----- Sonar ------- "
+  lane :code_sonar do
+    puts " 🧊🧊🧊🧊🧊🧊🧊🧊🧊🧊🧊🧊🧊🧊🧊 🐮 Sonar 🧊🧊🧊🧊🧊"
+    # params
+    params =  { 
+      project:  'StylesApp.xcodeproj', 
+      scheme: 'StylesApp', 
+      output_directory: './fastlane/xcov',
+      html_report: "true",
+    }
+    # action
+    sonar(params)
+  end
+
+  desc "  ----- Snapshot ------- "
+  lane :take_snapshot do
+    puts " 📱📱📱📱📱📱📱📱📱 snapshot 📱📱📱📱📱"
+    # params
+    params =  { 
+      project:  'StylesApp.xcodeproj', 
+      scheme: 'StylesApp', 
+      configuration: 'Debug',
+      sdk: "iphonesimulator",
+      output_directory: "./fastlane/screenshots"
+    }
+    # action
+    snapshot(params)
+  end
+
+  desc "  ----- Build number Update ------- "
+  lane :build_number_update do
+    puts "➕ ➕➕➕➕➕➕Build number Update ➕➕➕➕➕➕➕➕➕"
+    puts "Before: $get_build_number"
+    increment_build_number
+    puts "After: $increment_build_number"
+    
+    puts "Before: $get_version_number"
+    increment_version_number
+    puts "After: $increment_version_number"
+  end
+end

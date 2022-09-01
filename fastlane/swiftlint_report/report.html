@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<style type="text/css">
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 0.9rem;
+			}
+			
+			table {
+				border: 1px solid gray;
+				border-collapse: collapse;
+				-moz-box-shadow: 3px 3px 4px #AAA;
+				-webkit-box-shadow: 3px 3px 4px #AAA;
+				box-shadow: 3px 3px 4px #AAA;
+				vertical-align: top;
+				height: 64px;
+			}
+			
+			td, th {
+				border: 1px solid #D3D3D3;
+				padding: 5px 10px 5px 10px;
+			}
+			
+			th {
+				border-bottom: 1px solid gray;
+				background-color: rgba(41,52,92,0.313);
+			}
+			
+			.error, .warning {
+				text-align: center;
+			}
+			
+			.error {
+				background-color: #FF9D92;
+				color: #7F0800;
+			}
+			
+			.warning {
+				background-color: #FFF59E;
+				color: #7F7000;
+			}
+		</style>
+		
+		<title>SwiftLint Report</title>
+	</head>
+	<body>
+		<h1>SwiftLint Report</h1>
+		
+		<hr />
+		
+		<h2>Violations</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 60pt;">
+						<b>Serial No.</b>
+					</th>
+					<th style="width: 500pt;">
+						<b>File</b>
+					</th>
+					<th style="width: 60pt;">
+						<b>Location</b>
+					</th>
+					<th style="width: 60pt;">
+						<b>Severity</b>
+					</th>
+					<th style="width: 500pt;">
+						<b>Message</b>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align: right;">1</td>
+					<td>StylesApp/Source/Common/Components/PrimaryButton.swift</td>
+					<td style="text-align: center;">33:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 4.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">2</td>
+					<td>StylesApp/Source/Login/LoginUseCase.swift</td>
+					<td style="text-align: center;">30:85</td>
+					<td class="warning">Warning</td>
+					<td>Opening braces should be preceded by a single space and on the same line as the declaration.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">3</td>
+					<td>StylesApp/Source/Login/LoginUseCase.swift</td>
+					<td style="text-align: center;">16:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">4</td>
+					<td>StylesApp/Source/Login/LoginUseCase.swift</td>
+					<td style="text-align: center;">20:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">5</td>
+					<td>StylesApp/Source/Login/LoginUseCase.swift</td>
+					<td style="text-align: center;">22:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">6</td>
+					<td>StylesApp/Source/Login/LoginUseCase.swift</td>
+					<td style="text-align: center;">36:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 2.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">7</td>
+					<td>StylesApp/Source/DetailView/DetailView.swift</td>
+					<td style="text-align: center;">17:12</td>
+					<td class="warning">Warning</td>
+					<td>Trailing closure syntax should not be used when passing more than one closure argument.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">8</td>
+					<td>StylesApp/Source/DetailView/DetailView.swift</td>
+					<td style="text-align: center;">13:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">9</td>
+					<td>StylesApp/Source/DetailView/DetailView.swift</td>
+					<td style="text-align: center;">28:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">10</td>
+					<td>StylesApp/Source/DetailView/DetailView.swift</td>
+					<td style="text-align: center;">37:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">11</td>
+					<td>StylesApp/Source/DetailView/DetailView.swift</td>
+					<td style="text-align: center;">26:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 2.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">12</td>
+					<td>StylesApp/Source/Login/LoginView.swift</td>
+					<td style="text-align: center;">19:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 122 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">13</td>
+					<td>StylesApp/Source/Login/LoginView.swift</td>
+					<td style="text-align: center;">22:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 130 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">14</td>
+					<td>StylesApp/Source/Login/LoginView.swift</td>
+					<td style="text-align: center;">20:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">15</td>
+					<td>StylesApp/Source/Login/LoginView.swift</td>
+					<td style="text-align: center;">23:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">16</td>
+					<td>StylesApp/Source/Login/LoginView.swift</td>
+					<td style="text-align: center;">25:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">17</td>
+					<td>StylesApp/Source/Login/LoginView.swift</td>
+					<td style="text-align: center;">33:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">18</td>
+					<td>StylesApp/Source/Login/LoginView.swift</td>
+					<td style="text-align: center;">38:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">19</td>
+					<td>StylesApp/Source/Login/LoginView.swift</td>
+					<td style="text-align: center;">41:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">20</td>
+					<td>StylesApp/Source/Common/Components/TextInputView.swift</td>
+					<td style="text-align: center;">39:0</td>
+					<td class="warning">Warning</td>
+					<td>Line should be 110 characters or less: currently 142 characters</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">21</td>
+					<td>StylesApp/Source/Common/Components/TextInputView.swift</td>
+					<td style="text-align: center;">36:0</td>
+					<td class="warning">Warning</td>
+					<td>Limit vertical whitespace to a single empty line. Currently 4.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">22</td>
+					<td>StylesApp/Source/Login/LoginViewModel.swift</td>
+					<td style="text-align: center;">43:9</td>
+					<td class="warning">Warning</td>
+					<td>Else and catch should be on the same line, one space after the previous declaration.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">23</td>
+					<td>StylesApp/Source/Login/LoginViewModel.swift</td>
+					<td style="text-align: center;">12:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">24</td>
+					<td>StylesApp/Source/Login/LoginViewModel.swift</td>
+					<td style="text-align: center;">30:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">25</td>
+					<td>StylesApp/Source/Login/LoginViewModel.swift</td>
+					<td style="text-align: center;">32:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">26</td>
+					<td>StylesApp/Source/Login/LoginViewModel.swift</td>
+					<td style="text-align: center;">34:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">27</td>
+					<td>StylesApp/Source/Login/LoginViewModel.swift</td>
+					<td style="text-align: center;">38:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">28</td>
+					<td>StylesApp/Source/Login/LoginViewModel.swift</td>
+					<td style="text-align: center;">52:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+				<tr>
+					<td style="text-align: right;">29</td>
+					<td>StylesApp/Source/Common/Components/ErrorText.swift</td>
+					<td style="text-align: center;">13:0</td>
+					<td class="warning">Warning</td>
+					<td>Lines should not have trailing whitespace.</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<br/>
+		
+		<h2>Summary</h2>
+		
+		<table>
+			<tbody>
+				<tr>
+					<td>Total files with violations</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>Total warnings</td>
+					<td>29</td>
+				</tr>
+				<tr>
+					<td>Total errors</td>
+					<td>0</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<hr />
+		
+		<p>
+			Created with
+			<a href="https://github.com/realm/SwiftLint"><b>SwiftLint</b></a>
+			0.47.1 on 01/09/22
+		</p>
+	</body>
+</html>

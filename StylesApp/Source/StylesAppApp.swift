@@ -11,7 +11,7 @@ import SwiftUI
 struct StylesAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginBuilder.create()
         }
     }
 }
